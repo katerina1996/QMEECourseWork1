@@ -1,0 +1,22 @@
+#1  $ touch 407228326.fasta 
+    $ wc -l 407228326.fasta
+      28 407228326.fasta
+     
+    $ touch 407228412.fasta
+    $ wc -l 407228412.fasta
+      127 407228412.fasta
+
+    $ touch E.coli.fasta
+    $ wc -l E.coli.fasta
+      78104 E.coli.fasta
+
+
+#2  $ tail -n +2 E.coli.fasta
+
+
+
+#3  $ awk '/^>/ {print; next; } { seqlen = length($0); print seqlen}' E.coli.fasta
+
+
+#4  $ grep -i ATGC E.coli.fasta
+
